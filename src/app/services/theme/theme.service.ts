@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as domHelper from '../../shared/utils/dom.helper';
+import * as domHelper from '../../shared/helpers/dom.helper';
 @Injectable()
 export class ThemeService {
   egretThemes = [{

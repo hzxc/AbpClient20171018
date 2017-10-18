@@ -201,6 +201,10 @@
   version "3.2.15"
   resolved "http://r.cnpmjs.org/@types/jquery/download/@types/jquery-3.2.15.tgz#3f620a9f5a0b296866f4bc729825226d0a35fba6"
 
+"@types/lodash@^4.14.77":
+  version "4.14.77"
+  resolved "http://r.cnpmjs.org/@types/lodash/download/@types/lodash-4.14.77.tgz#0bc699413e84d6ed5d927ca30ea0f0a890b42d75"
+
 "@types/moment-timezone@^0.5.0":
   version "0.5.0"
   resolved "http://r.cnpmjs.org/@types/moment-timezone/download/@types/moment-timezone-0.5.0.tgz#44af00d6af2ab2d0227d83a5906d0212d3c4b08f"

@@ -1,0 +1,18 @@
+/*--------- Material ---------*/
+mat-list a[mat-list-item] .mat-list-item-content, 
+mat-list mat-list-item .mat-list-item-content, 
+mat-nav-list a[mat-list-item] .mat-list-item-content, 
+mat-nav-list mat-list-item .mat-list-item-content,
+[mat-menu-item],
+.mat-option, 
+body .mat-select-trigger {
+    font-size: .875rem !important;
+}
+
+/*--- Scroll Bar ---*/
+.ps__scrollbar-y-rail {
+    z-index: 999;
+}
+.collapsed-menu .ps__scrollbar-y-rail {
+    z-index: auto;
+}

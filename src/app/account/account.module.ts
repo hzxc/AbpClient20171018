@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { AccountRoutingModule } from './account-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { LoginService } from './login/login.service';
+import { AccountComponent } from './account.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,11 @@ import { LoginService } from './login/login.service';
   providers: [
     LoginService
   ],
-  declarations: [LanguagesComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AccountComponent,
+    LanguagesComponent,
+    LoginComponent, 
+    RegisterComponent, 
+  ],
 })
 export class AccountModule { }

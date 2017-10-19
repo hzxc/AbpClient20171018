@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 import { AppComponentBase } from '../../shared/app-component-base';
 
 @Component({
-  selector: 'app-languages',
+  selector: 'account-languages',
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.css']
 })

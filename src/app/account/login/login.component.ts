@@ -5,7 +5,7 @@ import { AbpSessionService } from 'abp-ng2-module/src/session/abp-session.servic
 import { AppComponentBase } from '../../shared/app-component-base';
 
 @Component({
-  selector: 'app-login',
+  selector: 'account-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -31,8 +31,14 @@ export class LoginComponent extends AppComponentBase {
       if (!this._sessionService.tenantId) {
           return false;
       }
-
       return true;
+    }
+
+    login(): void {
+      this.submitting = true;
+      this.loginService.authenticate(
+          () => this.submitting = false
+      );
   }
 
 }

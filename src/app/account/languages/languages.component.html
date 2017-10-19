@@ -1,5 +1,29 @@
-<ul class="account-language-switch-list text-center">
+<!-- <ul class="account-language-switch-list text-center">
   <li *ngFor="let language of languages">
-      <a *ngIf="language.name != currentLanguage.name" href="javascript:void();" title="{{language.displayName}}" (click)="changeLanguage(language.name)"><i class="{{language.icon}}"></i></a>
+      <a *ngIf="language.name != currentLanguage.name"
+       href="javascript:void();"
+        title="{{language.displayName}}"
+         (click)="changeLanguage(language.name)">
+         <i class="{{language.icon}}"></i></a>
   </li>
-</ul>
+</ul> -->
+
+
+
+<mat-grid-list cols="10" rowHeight="20">
+  <mat-grid-tile><a><div class="famfamfam-flags cn"></div></a></mat-grid-tile>
+  <mat-grid-tile><a><div class="famfamfam-flags cn"></div></a></mat-grid-tile>
+  <mat-grid-tile><a><div class="famfamfam-flags cn"></div></a></mat-grid-tile>
+  <mat-grid-tile><a><div class="famfamfam-flags cn"></div></a></mat-grid-tile>
+</mat-grid-list>
+
+<!-- 
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list> -->

@@ -7,12 +7,20 @@ import { AccountRoutingModule } from './account-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { LoginService } from './login/login.service';
 import { AccountComponent } from './account.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { ServiceProxyModule } from '../shared/service-proxies/service-proxy.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AccountRoutingModule,
-    MaterialModule
+    FormsModule,
+    HttpModule,
+    MaterialModule,
+    ServiceProxyModule,
+    ReactiveFormsModule,
   ],
   providers: [
     LoginService

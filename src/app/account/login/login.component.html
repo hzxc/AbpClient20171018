@@ -1,19 +1,26 @@
 <div class="text-center pb-1">
         <img src="assets/images/logo-full.png" alt="" class="mb-05">
-        <p class="text-muted m-0">Sign in to your account</p>
+        <h4 class="m-0">{{l("LogIn")}}</h4>
 </div>
-<form #loginForm novalidate>
+<form #loginForm="ngForm" novalidate [formGroup]="loginModel" (ngSubmit)="login()">
         <mat-form-field class="full-width">
             <mat-icon matPrefix>person</mat-icon>
-            <input matInput placeholder="User name or email">
+            <!-- <input required matInput [(ngModel)]="loginService.authenticateModel.userNameOrEmailAddress" name="userNameOrEmailAddress" placeholder="{{l('UserNameOrEmail')}}" #userNameOrEmailAddress="ngModel"> -->
+            <input required matInput formControlName="userNameOrEmailAddress" placeholder="{{l('UserNameOrEmail')}}">
+            <!-- <mat-error *ngIf="userNameOrEmailAddress.errors && (userNameOrEmailAddress.dirty || userNameOrEmailAddress.touched) && (userNameOrEmailAddress.errors.required)" >
+                {{getErrorMessage()}}
+            </mat-error> -->
         </mat-form-field>
+    
         <mat-form-field class="full-width">
             <mat-icon matPrefix>lock</mat-icon>
-            <input matInput placeholder="Password">
+            <!-- <input matInput [(ngModel)]="loginService.authenticateModel.password" name="password" placeholder="{{l('Password')}}"> -->
+            <input type="password" required matInput formControlName="password" placeholder="{{l('Password')}}">
         </mat-form-field>
         <section class="section-container">
-            <mat-checkbox>Remember this computer</mat-checkbox>
-            <button type="button" mat-raised-button class="mat-primary mb-1">Sign in</button>
+            <mat-checkbox formControlName="rememberMe">{{l("RememberMe")}}</mat-checkbox>
+            <!-- <mat-checkbox [(ngModel)]="loginService.rememberMe" name="rememberMe">{{l("RememberMe")}}</mat-checkbox> -->
+            <button type="submit" mat-raised-button class="mat-primary mb-1">Sign in</button>
         </section>
 </form>
         

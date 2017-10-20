@@ -6,7 +6,7 @@ import { AppComponentBase } from '../../shared/app-component-base';
 @Component({
   selector: 'account-languages',
   templateUrl: './languages.component.html',
-  styleUrls: ['./languages.component.css']
+  styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent extends AppComponentBase implements OnInit {
 

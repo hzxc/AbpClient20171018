@@ -7,7 +7,7 @@ import { AppRouteGuard } from './shared/auth/auth-route-guard';
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: 'account', 
+    redirectTo: 'dashboard', 
     pathMatch: 'full' 
   },
   {
@@ -29,14 +29,14 @@ const routes: Routes = [
   {
     path:'',
     component: AdminLayoutComponent,
-    // children:[
-    //   {
-    //     path: 'dashboard', 
-    //     loadChildren: './views/dashboard/dashboard.module#DashboardModule', 
-    //     canActivate:[AppRouteGuard],
-    //     data: { title: 'Dashboard', breadcrumb: 'DASHBOARD'}
-    //   }
-    // ]
+    children:[
+      {
+        path: 'dashboard', 
+        loadChildren: './views/dashboard/dashboard.module#DashboardModule', 
+        canActivate:[AppRouteGuard],
+        data: { title: 'Dashboard', breadcrumb: 'DASHBOARD'}
+      }
+    ]
   },
   { 
     path: '**', 

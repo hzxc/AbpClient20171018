@@ -21,7 +21,7 @@ export class ThemeService {
   }];
   activatedThemeName: String;
   constructor() {
-    this.changeTheme({name: 'blue-light-theme'});
+    this.changeTheme({name: 'indigo-light-theme'});
   }
   changeTheme(theme) {
     domHelper.changeTheme(this.egretThemes, theme.name);

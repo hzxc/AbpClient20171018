@@ -13,10 +13,10 @@ export class SideNavAccordionDirective implements OnInit {
         let self = this;
         var subMenu = this.el.nativeElement.querySelector('.mat-list-item-content > mat-nav-list');
         let isCollapsed = domHelper.hasClass(document.body, 'collapsed-menu');
-
+        
         if (!!subMenu)
         this.el.nativeElement.className += ' has-submenu';
-
+        
         if (isCollapsed) {
             setTimeout(() => {
               domHelper.removeClass(self.el.nativeElement, 'open');
@@ -57,9 +57,11 @@ export class SideNavAccordionDirective implements OnInit {
       var parenMenuItems = document.getElementsByClassName('has-submenu');
   
       if (domHelper.hasClass(elem, 'open')) {
+        console.log('remove');
         domHelper.removeClass(parenMenuItems, 'open');
   
       } else {
+        console.log('add');
         domHelper.removeClass(parenMenuItems, 'open');
         domHelper.addClass(elem, 'open');
       }

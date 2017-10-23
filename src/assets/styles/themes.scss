@@ -19,6 +19,19 @@ $indigo-light-theme:mat-light-theme($indigo-light-primary,$indigo-light-accent,$
         background-color: map-get($mat-pink, 500);
         color: black;
     }
+
+    .mat-color-primary,
+    .list-item-active,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > a > span,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open .sub-menu .mat-list-item.selected a {
+        color: map-get($mat-indigo, 500) !important;
+    }
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($mat-indigo, 500);
+    }
 }
 
 // @include angular-material-theme($indigo-light-theme);
@@ -32,6 +45,28 @@ $deeppurple-light-theme:mat-light-theme($deeppurple-light-primary,$deeppurple-li
 
 .deeppurple-light-theme{
     @include angular-material-theme($deeppurple-light-theme);
+
+    .mat-bg-primary{
+        background: map-get($mat-deep-purple, 500) !important;
+        color: #ffffff !important;
+    }
+    .mat-bg-accent{
+        background-color: map-get($mat-amber, 500);
+        color: black;
+    }
+
+    .mat-color-primary,
+    .list-item-active,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > a > span,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open .sub-menu .mat-list-item.selected a {
+        color: map-get($mat-deep-purple, 500) !important;
+    }
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($mat-deep-purple, 500);
+    }
 }
 
 
@@ -44,6 +79,28 @@ $purple-dark-theme:mat-dark-theme($purple-dark-primary,$purple-dark-accent,$purp
 
 .purple-dark-theme{
     @include angular-material-theme($purple-dark-theme);
+
+    .mat-bg-primary{
+        background: map-get($mat-purple, 500) !important;
+        color: #ffffff !important;
+    }
+    .mat-bg-accent{
+        background-color: map-get($mat-green, 500);
+        color: black;
+    }
+
+    .mat-color-primary,
+    .list-item-active,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > a > span,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open .sub-menu .mat-list-item.selected a {
+        color: map-get($mat-purple, 500) !important;
+    }
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($mat-purple, 500);
+    }
 }
 
 //pink
@@ -55,6 +112,28 @@ $pink-dark-theme:mat-dark-theme($pink-dark-primary,$pink-dark-accent,$pink-dark-
 
 .pink-dark-theme{
     @include angular-material-theme($pink-dark-theme);
+
+    .mat-bg-primary{
+        background: map-get($mat-pink, 500) !important;
+        color: #ffffff !important;
+    }
+    .mat-bg-accent{
+        background-color: map-get($mat-blue-grey, 500);
+        color: black;
+    }
+
+    .mat-color-primary,
+    .list-item-active,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > a > span,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open .sub-menu .mat-list-item.selected a {
+        color: map-get($mat-pink, 500) !important;
+    }
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($mat-pink, 500);
+    }
 }
 
 //custom bule
@@ -140,5 +219,18 @@ $blue-primary-dark: darken( map-get($blue-primary, 500), 8% );
     .mat-bg-accent{
         background-color: map-get($blue-accent, 500);
         color: black;
+    }
+
+    .mat-color-primary,
+    .list-item-active,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > a > span,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open .sub-menu .mat-list-item.selected a {
+        color: map-get($blue-primary, 500) !important;
+    }
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open > .mat-list-item-content > .sub-menu,
+    .sidebar-panel.mat-sidenav .sidebar-list-item.open md-icon:not(.menu-caret),
+    .list-item-active {
+        border-color: map-get($blue-primary, 500);
     }
 }

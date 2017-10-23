@@ -8,6 +8,7 @@ import { MaterialModule } from '../material/material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavigationService } from './services/navigation.service';
+import { SideNavAccordionDirective } from './directives/sidenav-accordion.directive';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { NavigationService } from './services/navigation.service';
     MaterialModule
   ],
   providers: [ThemeService,NavigationService],
-  declarations: [AuthLayoutComponent, AdminLayoutComponent, NavigationComponent]
+  declarations: [AuthLayoutComponent, AdminLayoutComponent, NavigationComponent,SideNavAccordionDirective],
+  
 })
 export class CoreModule { }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { AbpSessionService } from 'abp-ng2-module/src/session/abp-session.service';
 import { AppComponentBase } from '../../shared/app-component-base';
 import { MatProgressBar, MatButton } from '@angular/material';
-import { AccountLoginService } from '../shared-service/account-login-service';
+import { AccountLoginService } from '../shared-services/account-login-service';
 
 @Component({
   selector: 'account-login',

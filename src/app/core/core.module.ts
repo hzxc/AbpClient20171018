@@ -7,6 +7,7 @@ import { ThemeService } from '../services/theme/theme.service';
 import { MaterialModule } from '../material/material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavigationService } from './services/navigation.service';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RouterModule,
     MaterialModule
   ],
-  providers: [ThemeService],
+  providers: [ThemeService,NavigationService],
   declarations: [AuthLayoutComponent, AdminLayoutComponent, NavigationComponent]
 })
 export class CoreModule { }

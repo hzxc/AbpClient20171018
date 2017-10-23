@@ -1,6 +1,8 @@
 <mat-sidenav-container class="app-side-nav-container">
-  <mat-sidenav #sidenav [opened]="!isNavOver()" [mode]="isNavOver() ? 'over' : 'side'">
-    admin-layout works!
+  <mat-sidenav
+  #sidenav [opened]="!isNavOver()"
+  [mode]="isNavOver() ? 'over' : 'side'"
+  class="sidebar-panel">
     <core-navigation></core-navigation>
   </mat-sidenav>
   <router-outlet></router-outlet>

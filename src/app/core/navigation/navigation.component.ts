@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'core-navigation',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
-  constructor() { }
+  iconTypeMenuTitle:string;
+  menuItems:any[];
+  constructor(private navService: NavigationService) { }
 
   ngOnInit() {
+    this.iconTypeMenuTitle = this.navService.iconTypeMenuTitle;
+    // Loads menu items from NavigationService
+    this.navService.menuItems$.subscribe(menuItem => {
+      this.menuItems = menuItem;
+    });
   }
 
 }

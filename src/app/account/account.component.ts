@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountLoginService } from './shared-service/account-login-service';
+import { AccountLoginService } from './shared-services/account-login-service';
 
 @Component({
   selector: 'app-account',

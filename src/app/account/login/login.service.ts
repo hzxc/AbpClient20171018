@@ -35,15 +35,15 @@ export class LoginService {
     authenticate(data:any,finallyCallback?: () => void): void {
         
         this.authenticateModel.init(data);
-        
+
         finallyCallback = finallyCallback || (() => { });
-        var si=setInterval(function(){finallyCallback();clearInterval(si);},2000);
-        // this._tokenAuthService
-        //     .authenticate(this.authenticateModel)
-        //     .finally(finallyCallback)
-        //     .subscribe((result: AuthenticateResultModel) => {
-        //         this.processAuthenticateResult(result);
-        //     });
+        // var si=setInterval(function(){finallyCallback();clearInterval(si);},2000);
+        this._tokenAuthService
+            .authenticate(this.authenticateModel)
+            .finally(finallyCallback)
+            .subscribe((result: AuthenticateResultModel) => {
+                this.processAuthenticateResult(result);
+            });
     }
 
     private processAuthenticateResult(authenticateResult: AuthenticateResultModel) {

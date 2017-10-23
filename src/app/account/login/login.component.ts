@@ -29,7 +29,7 @@ export class LoginComponent extends AppComponentBase {
     private accountLoginService: AccountLoginService) { 
       super(injector);
       this.loginModel = fb.group({
-        userNameOrEmailAddress: ['', [Validators.required, Validators.minLength(6)]],
+        userNameOrEmailAddress: ['', [Validators.required, Validators.minLength(4)]],
         password:['', [Validators.required, Validators.minLength(6)]],
         rememberMe:false
       });
@@ -37,7 +37,7 @@ export class LoginComponent extends AppComponentBase {
     
     userNameOrEmailAddressErrorMessage():string {
     return this.loginModel.hasError('required',['userNameOrEmailAddress']) ? 'You must enter a value' :
-        this.loginModel.hasError('minlength',['userNameOrEmailAddress']) ? 'minLength length 6' :'';
+        this.loginModel.hasError('minlength',['userNameOrEmailAddress']) ? 'minLength length 4' :'';
     }
     passwordErrorMessage():string{
       return this.loginModel.hasError('required',['password']) ? 'You must enter a value' :
@@ -67,7 +67,7 @@ export class LoginComponent extends AppComponentBase {
 
     login(): void {
       if(this.loginModel.invalid) return;
-      console.log(this.loginModel.value);
+      // console.log(this.loginModel.value);
       this.progressBarChange();
       this.submitButton.disabled = true;
       this.loginService.authenticate(

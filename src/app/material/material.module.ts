@@ -13,7 +13,8 @@ import {
   MatMenuModule,
   MatCheckboxModule,
   MatTooltipModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSidenavModule
 } from '@angular/material';
 
 @NgModule({
@@ -30,7 +31,8 @@ import {
     MatAutocompleteModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSidenavModule
   ],
   exports: [
     MatProgressBarModule,
@@ -46,7 +48,8 @@ import {
     MatAutocompleteModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSidenavModule
   ],
   declarations: []
 })

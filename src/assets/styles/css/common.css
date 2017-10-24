@@ -1,5 +1,8 @@
 /*---- Common -----*/
-.bg-none {
+.full-width {
+    width: 100% !important;
+}
+/* .bg-none {
     background: transparent !important;
 }
 .bg-white {
@@ -409,4 +412,4 @@
 }
 .app-accordion:not(.open) .show-on-open {
     display: none !important;
-}
+} */

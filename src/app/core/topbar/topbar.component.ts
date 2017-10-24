@@ -19,7 +19,12 @@ export class TopbarComponent implements OnInit {
   }, {
     name: 'Chinese',
     code: 'cn-zh',
-  }]
+  },
+  {
+    name: 'Chinese',
+    code: 'cn-zh',
+  }
+  ]
   constructor() { }
  
   ngOnInit() {

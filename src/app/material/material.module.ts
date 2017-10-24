@@ -14,7 +14,9 @@ import {
   MatCheckboxModule,
   MatTooltipModule,
   MatProgressBarModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatSelectModule,
+  MatFormFieldModule
 } from '@angular/material';
 
 @NgModule({
@@ -32,7 +34,9 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   exports: [
     MatProgressBarModule,
@@ -49,7 +53,9 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   declarations: []
 })

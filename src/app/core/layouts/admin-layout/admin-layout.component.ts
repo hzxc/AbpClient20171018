@@ -31,7 +31,10 @@ export class AdminLayoutComponent implements OnInit {
   }
   
   isNavOver() {
-    return window.matchMedia(`(max-width: 960px)`).matches;
+    let appBody = document.body;
+    
+    return window.matchMedia(`(max-width: 959px)`).matches  
+    && !domHelper.hasClass(appBody, 'collapsed-menu'); ;
   }
 
 }

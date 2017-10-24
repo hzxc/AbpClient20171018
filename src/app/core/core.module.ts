@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavigationService } from './services/navigation.service';
 import { SideNavAccordionDirective } from './directives/sidenav-accordion.directive';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,11 @@ import { SideNavAccordionDirective } from './directives/sidenav-accordion.direct
     MaterialModule
   ],
   providers: [ThemeService,NavigationService],
-  declarations: [AuthLayoutComponent, AdminLayoutComponent, NavigationComponent,SideNavAccordionDirective],
-  
+  declarations: [
+    AuthLayoutComponent, 
+    AdminLayoutComponent, 
+    NavigationComponent,
+    SideNavAccordionDirective, 
+    TopbarComponent],
 })
 export class CoreModule { }

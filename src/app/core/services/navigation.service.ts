@@ -20,44 +20,56 @@ export class NavigationService {
 
     defaultMenu:IMenuItem[] = [
         {
-          name: 'DASHBOARD',
+          name: 'Dashboard',
           type: 'link',
           tooltip: 'Dashboard',
           icon: 'dashboard',
           state: 'dashboard'
         },
         {
-          name: 'INBOX',
+          name: 'Inbox',
           type: 'link',
           tooltip: 'Inbox',
           icon: 'inbox',
           state: 'inbox'
         },
         {
-          name: 'CHAT',
+          name: 'Chat',
           type: 'link',
           tooltip: 'Chat',
           icon: 'chat',
           state: 'chat'
         },
         {
-          name: 'CALENDAR',
+          name: 'Calendar',
           type: 'link',
           tooltip: 'Calendar',
           icon: 'date_range',
           state: 'calendar'
         },
         {
-          name: 'DIALOGS',
+          name: 'Dialogs',
           type: 'dropDown',
           tooltip: 'Dialogs',
           icon: 'filter_none',
           state: 'dialogs',
           sub: [
-            {name: 'CONFIRM', state: 'confirm'},
-            {name: 'LOADER', state: 'loader'},
+            {name: 'Confirm', state: 'confirm'},
+            {name: 'Loader', state: 'loader'},
           ]
-        }];
+        },
+        {
+          name: 'Users',
+          type: 'dropDown',
+          tooltip: 'Users',
+          icon: 'person_outline',
+          state: 'users',
+          sub: [
+            {name: 'Create', state: 'create'},
+            {name: 'Edit', state: 'edit'},
+          ]
+        }
+      ];
         iconTypeMenuTitle:string = 'Frequently Accessed';
         menuItems = new BehaviorSubject<IMenuItem[]>(this.defaultMenu);
         menuItems$ = this.menuItems.asObservable();

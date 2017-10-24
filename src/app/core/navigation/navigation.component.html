@@ -7,7 +7,7 @@
         [ngClass]="{'has-submenu': item.type === 'dropDown'}"
         routerLinkActive="open"
         >
-        <a routerLink="/{{item.state}}" *ngIf="item.type === 'link'" fxFill  fxLayoutAlign="start center">
+        <a routerLink="/{{item.state}}" *ngIf="item.type === 'link'">
           <span
           class="menu-item-tooltip" 
           [matTooltip]="item.tooltip" 
@@ -15,7 +15,7 @@
           <mat-icon>{{item.icon}}</mat-icon>
           <span>{{item.name}}</span>
         </a>
-        <a *ngIf="item.type === 'dropDown'" fxFill fxLayoutAlign="start center" class="drop">
+        <a *ngIf="item.type === 'dropDown'" class="drop">
             <span
             class="menu-item-tooltip"
             [matTooltip]="item.tooltip" 
@@ -25,7 +25,7 @@
             <span fxFlex></span>
             <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
           </a>
-          <a [href]="item.state" *ngIf="item.type === 'extLink'" target="_blank" fxFill>
+          <a [href]="item.state" *ngIf="item.type === 'extLink'" target="_blank">
               <span
               class="menu-item-tooltip" 
               [matTooltip]="item.tooltip" 
@@ -33,11 +33,11 @@
               <mat-icon>{{item.icon}}</mat-icon>
               <span>{{item.name}}</span>
           </a>
-          <mat-nav-list class="sub-menu" role="list" *ngIf="item.type === 'dropDown'" dense fxFill>
+          <mat-nav-list class="sub-menu" role="list" *ngIf="item.type === 'dropDown'" dense>
                 <mat-list-item 
                 routerLinkActive="selected"
                 *ngFor="let subItem of item.sub">
-                  <a routerLink="{{item.state ? '/'+item.state : ''}}/{{subItem.state}}" fxFill>{{subItem.name}}</a>
+                  <a routerLink="{{item.state ? '/'+item.state : ''}}/{{subItem.state}}">{{subItem.name}}</a>
                 </mat-list-item>
           </mat-nav-list>
         </mat-list-item>

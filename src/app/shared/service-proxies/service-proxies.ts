@@ -872,6 +872,7 @@ export class TokenAuthServiceProxy {
     constructor(@Inject(Http) http: Http, @Optional() @Inject(API_BASE_URL) baseUrl?: string) {
         this.http = http;
         this.baseUrl = baseUrl ? baseUrl : "";
+
     }
 
     /**
@@ -891,7 +892,7 @@ export class TokenAuthServiceProxy {
                 "Accept": "application/json"
             })
         };
-
+        console.log(options_);
         return this.http.request(url_, options_).flatMap((response_) => {
             return this.processAuthenticate(response_);
         }).catch((response_: any) => {

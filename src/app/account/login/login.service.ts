@@ -35,7 +35,7 @@ export class LoginService {
     authenticate(data:any,finallyCallback?: () => void): void {
         
         this.authenticateModel.init(data);
-
+        console.log(this.authenticateModel);
         finallyCallback = finallyCallback || (() => { });
         // var si=setInterval(function(){finallyCallback();clearInterval(si);},2000);
         this._tokenAuthService

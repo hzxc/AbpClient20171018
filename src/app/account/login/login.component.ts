@@ -31,7 +31,7 @@ export class LoginComponent extends AppComponentBase {
       this.loginModel = fb.group({
         userNameOrEmailAddress: ['', [Validators.required, Validators.minLength(4)]],
         password:['', [Validators.required, Validators.minLength(6)]],
-        rememberMe:false
+        rememberClient:false
       });
     }
     
@@ -67,7 +67,7 @@ export class LoginComponent extends AppComponentBase {
 
     login(): void {
       if(this.loginModel.invalid) return;
-      // console.log(this.loginModel.value);
+      console.log(this.loginModel.value);
       this.progressBarChange();
       this.submitButton.disabled = true;
       this.loginService.authenticate(

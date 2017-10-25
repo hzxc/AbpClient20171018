@@ -15,8 +15,8 @@ import { AppSessionService } from './shared/session/app-session.service';
 import { CoreModule } from './core/core.module';
 
 export function appInitializerFactory(injector: Injector) {
+  console.log('appInitializerFactory');
   return () => {
-
     // abp.ui.setBusy();
     return new Promise<boolean>((resolve, reject) => {
       AppPreBootstrap.run(() => {
@@ -36,11 +36,14 @@ export function appInitializerFactory(injector: Injector) {
   }
 }
 export function getRemoteServiceBaseUrl(): string {
+  console.log('getRemoteServiceBaseUrl');
   return AppConsts.remoteServiceBaseUrl;
 }
 
 export function getCurrentLanguage(): string {
+  console.log('getCurrentLanguage');
   return abp.localization.currentLanguage.name;
+  
 }
 @NgModule({
   declarations: [
@@ -53,7 +56,7 @@ export function getCurrentLanguage(): string {
     ServiceProxyModule,
     AppRoutingModule,
     HttpModule,
-    CoreModule
+    CoreModule,
   ],
   providers: [
     ABP_HTTP_PROVIDER,

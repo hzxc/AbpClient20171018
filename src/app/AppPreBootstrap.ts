@@ -6,6 +6,7 @@ import { Type, CompilerOptions, NgModuleRef } from '@angular/core';
 export class AppPreBootstrap {
 
     static run(callback: () => void): void {
+        console.log('AppPreBootstrap');
         AppPreBootstrap.getApplicationConfig(() => {
             AppPreBootstrap.getUserConfiguration(callback);
         });
@@ -33,6 +34,9 @@ export class AppPreBootstrap {
 
     private static getUserConfiguration(callback: () => void): JQueryPromise<any> {
         
+        console.log(abp.auth.getToken());
+        console.log( abp.utils.getCookieValue("Abp.Localization.CultureName"));
+        console.log(abp.multiTenancy.getTenantIdCookie());
         return abp.ajax({
             url: AppConsts.remoteServiceBaseUrl + '/AbpUserConfiguration/GetAll',
             method: 'GET',
@@ -42,6 +46,7 @@ export class AppPreBootstrap {
                 'Abp.TenantId': abp.multiTenancy.getTenantIdCookie()
             }
         }).done(result => {
+            console.log(result);
             $.extend(true, abp, result);
 
             abp.clock.provider = this.getCurrentClockProvider(result.clock.provider);

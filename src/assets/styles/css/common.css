@@ -7,6 +7,10 @@
 {
    overflow: visible !important;
 }
+
+.text-center {
+    text-align: center;
+}
 /* .bg-none {
     background: transparent !important;
 }

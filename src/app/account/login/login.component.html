@@ -1,6 +1,6 @@
-<div class="text-center pb-1">
+<div class="text-center">
         <img src="assets/images/logo-full.png" alt="" class="mb-05">
-        <h4 class="m-0">{{l("LogIn")}}</h4>
+        <h3>{{l("LogIn")}}</h3>
 </div>
 <form #loginForm="ngForm" novalidate [formGroup]="loginModel" (ngSubmit)="login()">
         <mat-form-field class="full-width form-field">
@@ -14,7 +14,7 @@
             <mat-error>{{passwordErrorMessage()}}</mat-error>
         </mat-form-field>
         <section class="section-container">
-            <mat-checkbox formControlName="rememberMe">{{l("RememberMe")}}</mat-checkbox>
+            <mat-checkbox formControlName="rememberClient">{{l("RememberMe")}}</mat-checkbox>
             <button type="submit" mat-raised-button class="mat-primary mb-1">{{l("LogIn")}}</button>
         </section>
 </form>

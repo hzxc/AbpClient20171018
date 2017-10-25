@@ -10,20 +10,24 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavigationService } from './services/navigation.service';
 import { SideNavAccordionDirective } from './directives/sidenav-accordion.directive';
 import { TopbarComponent } from './topbar/topbar.component';
+import { ThemeSwitcherComponent } from '../shared/modules/theme-switcher/theme-switcher.component';
+import { ThemeSwitcherModule } from '../shared/modules/theme-switcher/theme-switcher.module';
 
 @NgModule({
   imports: [
     FlexLayoutModule,
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ThemeSwitcherModule
   ],
-  providers: [ThemeService,NavigationService],
+  providers: [NavigationService],
   declarations: [
     AuthLayoutComponent, 
     AdminLayoutComponent, 
     NavigationComponent,
     SideNavAccordionDirective, 
-    TopbarComponent],
+    TopbarComponent,
+    ],
 })
 export class CoreModule { }

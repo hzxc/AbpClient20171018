@@ -3,7 +3,7 @@
         <h4 class="m-0">{{l("LogIn")}}</h4>
 </div>
 <form #loginForm="ngForm" novalidate [formGroup]="loginModel" (ngSubmit)="login()">
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width form-field">
             <mat-icon matPrefix>person</mat-icon>
             <input required matInput formControlName="userNameOrEmailAddress" placeholder="{{l('UserNameOrEmail')}}">
             <mat-error>{{userNameOrEmailAddressErrorMessage()}}</mat-error>

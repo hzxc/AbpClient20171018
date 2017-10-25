@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { ServiceProxyModule } from '../shared/service-proxies/service-proxy.module';
+import { ThemeSwitcherModule } from '../shared/modules/theme-switcher/theme-switcher.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { ServiceProxyModule } from '../shared/service-proxies/service-proxy.modu
     MaterialModule,
     ServiceProxyModule,
     ReactiveFormsModule,
+    ThemeSwitcherModule
   ],
   providers: [
     LoginService

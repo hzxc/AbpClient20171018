@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as domHelper from '../../shared/helpers/dom.helper';
+import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
   selector: 'core-topbar',
@@ -25,10 +26,16 @@ export class TopbarComponent implements OnInit {
     code: 'cn-zh',
   }
   ]
-  constructor() { }
+  constructor(private themeService: ThemeService) {
+    // this.themes = this.themeService.themes;
+   }
  
   ngOnInit() {
   }
+  // themes:any[];
+  // changeTheme(theme) {
+  //   this.themeService.changeTheme(theme);
+  // }
 
   toggleSidenav() {
     this.sidenav.toggle();

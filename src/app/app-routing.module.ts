@@ -33,7 +33,7 @@ const routes: Routes = [
       {
         path: 'dashboard', 
         loadChildren: './views/dashboard/dashboard.module#DashboardModule', 
-        canActivate:[AppRouteGuard],
+        // canActivate:[AppRouteGuard],
         data: { title: 'Dashboard', breadcrumb: 'Dashboard'}
       },
       {
